@@ -1,0 +1,21 @@
+{
+  "userId": "123456",
+  "train": [
+    {
+      "trainId": 1,
+      "sensors": [
+        {
+          "heat": 32
+        }
+      ]
+    },
+    {
+      "trainId": 2,
+      "sensors": [
+        {
+          "heat": 33
+        }
+      ]
+    }
+  ]
+}
