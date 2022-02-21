@@ -13,12 +13,12 @@ function checkLogin(userId) {
       }
     });
 }
-export function routing() {
+export function routing(name, path) {
   const router = new Router();
   router.root = "http://127.0.0.1:5500";
   router.add({
-    name: "home",
-    path: "/home.html",
+    name: name,
+    path: path,
     handler: () => {
       console.log("great");
     },

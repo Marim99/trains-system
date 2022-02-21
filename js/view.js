@@ -9,9 +9,18 @@ function showLogin() {
         </p>
         <div class="input-group">
           <input
-            type="text"
+            type="email"
             placeholder="Enter your ID"
             id="user-id"
+            required
+           
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="password"
+            placeholder="Enter your password"
+            id="user-password"
             required
            
           />
