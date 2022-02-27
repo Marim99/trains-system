@@ -11,7 +11,8 @@ function checkLogin(e) {
   let x = Data.sendData(userId, userPassword);
 }
 function loginBtn(e) {
-  e.preventDefault();
+  // e.preventDefault();
+  Model.routing("login", "/login.html");
 }
 function showAllTrains() {
   Model.getTrains();

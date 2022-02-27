@@ -58,7 +58,7 @@ async function sendData(email, password) {
     );
     console.log(responseData);
     if (responseData.id !== undefined) {
-      routing("home", "/home.html");
+      routing("trains", "/trains.html");
     }
   } catch (err) {
     console.log(err);

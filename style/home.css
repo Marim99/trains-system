@@ -183,6 +183,8 @@ a {
   background-color: #6195ff;
   border-radius: 10px;
   border: none;
+  width: 100px;
+  height: 30px;
 }
 /* ---------------------3.1-home------------------------- */
 .home {
