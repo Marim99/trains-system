@@ -1,7 +1,8 @@
+import { getData, showAllDataOfTrains } from "./fetchData/xhr.js";
 import Router from "./router.js";
 import * as View from "./view.js";
 
-function checkLogin(userId) {
+/*function checkLogin(userId) {
   fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
@@ -12,8 +13,8 @@ function checkLogin(userId) {
         console.log("false");
       }
     });
-}
-export function routing(name, path) {
+}*/
+function routing(name, path) {
   const router = new Router();
   router.root = "http://127.0.0.1:5500";
   router.add({
@@ -34,12 +35,19 @@ export function routing(name, path) {
       false,
     ),
   );
-  /* let currentPath = window.location.pathname;
-  if (currentPath === "/") {
-    // View.showLogin();
-    console.log("hh");
-  } else if (currentPath === "/home") {
-    View.showAllTrains();
-  }*/
 }
-export { checkLogin };
+function getTrains() {
+  // getData("https://reqres.in/api/unknown");
+  showAllDataOfTrains("https://reqres.in/api/unknown");
+}
+async function getResult() {
+  let result = await showAllDataOfTrains("https://reqres.in/api/unknown");
+  return result;
+}
+
+async function doTask() {
+  let data = await getResult();
+  console.log(`data ${data}`);
+}
+
+export { routing, getTrains, doTask };

@@ -1,4 +1,5 @@
 import { routing } from "../model.js";
+import { showAllTrains } from "../view.js";
 
 const sendHttpRequest = (method, url, data) => {
   const promise = new Promise((resolve, reject) => {
@@ -25,15 +26,26 @@ const sendHttpRequest = (method, url, data) => {
 
     xhr.send(JSON.stringify(data));
   });
+
   return promise;
 };
-
-const getData = () => {
-  sendHttpRequest("GET", "https://reqres.in/api/users").then((responseData) => {
-    console.log(responseData);
+//"https://reqres.in/api/users"
+const getData = (url) => {
+  sendHttpRequest("GET", url).then((responseData) => {
+    console.log(responseData.data);
   });
 };
-
+const showAllDataOfTrains = (url) => {
+  sendHttpRequest("GET", url).then((responseData) => {
+    responseData.data.forEach((e) => {
+      let trainId = e.id;
+      let trainState = e.name;
+      console.log(trainId);
+      console.log(trainState);
+      showAllTrains(trainId, trainState);
+    });
+  });
+};
 async function sendData(email, password) {
   try {
     const responseData = await sendHttpRequest(
@@ -50,7 +62,10 @@ async function sendData(email, password) {
     }
   } catch (err) {
     console.log(err);
+    alert("Only defined users succeed registration");
+    document.querySelector("#user-id").value = "";
+    document.querySelector("#user-password").value = "";
   }
 }
 
-export { getData, sendData };
+export { getData, sendData, showAllDataOfTrains };

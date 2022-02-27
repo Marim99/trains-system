@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* css3>> 34an my5ale4 al border aw al padding yzawedo alwidth bta3 al 3onsor w ya5od mn al width ally mawgod*/
+}
+body {
+  font-family: "Varela Round", sans-serif;
+}
+.container {
+  width: 80%;
+  /* background-color:bisque; */
+  /* background-color:grey; */
+  margin: auto; /*34an ywastan al div fe nos al bage*/
+}
+
+.clear {
+  clear: both; /*to solve float problem*/
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.hover-opacity {
+  transition: opacity 0.8s;
+}
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+.ltr-effect {
+  position: relative;
+}
+.ltr-effect:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: #333;
+  /*34an y8aty al 3onsor: */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.5s;
+}
+.ltr-effect:hover:after {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: montserrat, sans-serif;
+}
+button {
+  font-family: inherit; /*ya3ny ya5od al font family bta3t kol al mawk3*/
+}
+
+.section-header {
+  text-align: center;
+}
+.section-header .section-title {
+  font-size: 35px;
+  text-transform: capitalize;
+}
+.section-header .section-title::after {
+  content: " ";
+  width: 40px;
+  height: 3px;
+  background-color: #6195ff;
+  display: block;
+  margin: 10px auto 70px auto;
+}
+
+.pd-y {
+  padding: 120px 0;
+  overflow: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mg {
+  margin: 0 5%;
+}
+/* ----------------------------3.0-Header----------------------------------- */
+.header {
+  /* background-color:antiquewhite; */
+  background-color: #001a33;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.header .container .logo {
+  width: 40%;
+  /* background-color: blueviolet; */
+  float: left;
+}
+.header .container .nav {
+  width: 60%;
+  /*background-color: blue;*/
+  float: left;
+  list-style: none;
+  text-align: right;
+}
+.header .container .nav > li {
+  display: inline-block; /*34an ageb kol al li ganb b3d*/
+  text-align: center;
+  margin: 5px 0;
+}
+.header .container .nav li a {
+  /*................*/
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 10px; /*al badding hena 27sn mn al li 34an 2wsa3 al a 34an lma 2dos fe ay mkan akon wa2f 3la al link m4 4art al kelma bas*/
+  display: block; /*34an al padding y4t8al mn kol al 2tgahat*/
+}
+
+/* al line al azra2 ally ta7t kol link bedon hover */
+.header .container .nav > li > a.active::after,
+.header .container .nav > li > a::after {
+  content: "";
+  margin-top: 2px;
+  display: block;
+  height: 3px;
+  background-color: cornflowerblue;
+  transition: 0.5s; /*34an al hover*/
+}
+.header .container .nav > li > a::after {
+  width: 0;
+}
+.header .container .nav > li > a.active::after {
+  width: 100%;
+}
+
+.header .container .nav > li > a:hover:after {
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown-menue {
+  position: absolute;
+}
+.header .container .logo img {
+  width: 70px;
+  height: 40px;
+}
+
+.header .container .nav li .dropdown-menue a:hover:after {
+  width: 0;
+}
+.dropdown-menue {
+  text-align: center;
+  width: 150px;
+  text-decoration: none;
+  padding: 0px 0;
+  left: -90%;
+  top: 100%;
+  background-color: #6195ff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+}
+.dropdown:hover .dropdown-menue {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo-icon {
+  color: white;
+}
+.login-btn {
+  background-color: #6195ff;
+  border-radius: 10px;
+  border: none;
+}
+/* ---------------------3.1-home------------------------- */
+.home {
+  height: 100vh;
+  background-image: url(../Images/train.jpg);
+  background-position: center;
+  background-size: cover; /*css3*/
+  position: relative;
+}
+.home-content {
+  /* background:green; */
+  /* 34an 2wastan al 3onsor: use (Herro-image ) tecnique */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* end of herro image tecnique */
+  text-align: center;
+  width: 65%;
+}
+.home .title1 {
+  color: white;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.home-desc {
+  margin: 20px 0px;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}

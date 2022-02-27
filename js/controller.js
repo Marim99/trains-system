@@ -8,27 +8,27 @@ function checkLogin(e) {
   let userPassword = document.querySelector("#user-password").value;
   console.log(`id ${userId}`);
   console.log(`passwprd ${userPassword}`);
-  //Model.checkLogin(userId);
-  /* fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.userId == userId) {
-        console.log("true");
-        Model.routing();
-      } else {
-        console.log("false");
-        alert("Enter your correct Id");
-        document.querySelector("#user-id").value = "";
-      }
-    });*/
   let x = Data.sendData(userId, userPassword);
 }
-
+function loginBtn(e) {
+  e.preventDefault();
+}
+function showAllTrains() {
+  Model.getTrains();
+}
 function init() {
-  Data.getData();
+  Data.getData("https://reqres.in/api/users");
   View.showLogin();
   document
     .querySelector("#submit-button")
     .addEventListener("click", checkLogin);
 }
-export { init };
+function trains() {
+  showAllTrains();
+}
+function home() {
+  View.showHome();
+  document.querySelector("#login-button").addEventListener("click", loginBtn);
+}
+
+export { init, showAllTrains, trains, home };
