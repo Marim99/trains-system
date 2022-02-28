@@ -5,9 +5,9 @@ let containerTrains = document.querySelector(".trains-div-container");
 let containerHome = document.querySelector(".home-div-container");
 let containerNavbar = document.querySelector(".header");
 const test = () => {
-  // const myModal = new bootstrap.Modal(document.getElementById("gallery-modal"));
+  // const myModal = new bootstrap.Modal(document.getElementById("Mymodal"));
   //myModal.show();
-  $("#gallery-modal").modal("show");
+  $("#Mymodal").modal("show");
 };
 
 const navbar = () => {
