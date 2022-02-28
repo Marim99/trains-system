@@ -3,6 +3,37 @@ import { Route } from "./route.js";
 let containerLogin = document.querySelector(".container-login");
 let containerTrains = document.querySelector(".trains-div-container");
 let containerHome = document.querySelector(".home-div-container");
+let containerNavbar = document.querySelector(".header");
+const test = () => {
+  // const myModal = new bootstrap.Modal(document.getElementById("gallery-modal"));
+  //myModal.show();
+  $("#gallery-modal").modal("show");
+};
+
+const navbar = () => {
+  let Html = `
+  <div class="container">
+    <!-- logo -->
+    <div class="logo">
+      <i class="fa fa-train fa-3x logo-icon" aria-hidden="true"></i>
+    </div>
+
+    <!-- navbar -->
+    <ul class="nav">
+      <li><a href="#" class="active navbar-link">Home</a></li>
+      <li><a class="navbar-link" href="#about">About</a></li>
+      <li class="login-li">
+        <a href="/login.html"><button class="login-btn hover-opacity" id="login-button"  >
+          login
+        </button><a>
+      </li>
+    </ul>
+    <!--./nav-->
+
+    <div class="clear"></div>
+  </div>`;
+  containerNavbar.innerHTML = Html;
+};
 const showLogin = () => {
   let Html = `
   <form  class="login-id">
@@ -28,7 +59,7 @@ const showLogin = () => {
           />
         </div>
         <div class="input-group">
-          <button route="/trains.html" id="submit-button" name="submit" class="btn">Login</button>
+          <button route="/trains.html" id="submit-button" name="submit" class="btn"><a href="/trains.html">Login</a></button>
         </div>
       </form>
   `;
@@ -36,50 +67,22 @@ const showLogin = () => {
 };
 const showAllTrains = (id, state) => {
   let Html = `
-  
-  <div class="card train-card ">
- 
- 
-  <a href="#" class="justify-content-between">  
+  <div class="card train-card" ${(onclick = function () {
+    test();
+  })}>
   <div class="card-body">${id}
   </div>
   <div class="card-body train-state">${state}
   </div>
-  </a>
   
 </div>
         
   `;
-  // containerHome.appendChild(Html);
   containerTrains.innerHTML += Html;
 };
 const showHome = () => {
   let Html = `
-  <div class="header">
-  <!--container-->
-  <div class="container">
-    <!-- logo -->
-    <div class="logo">
-      <i class="fa fa-train fa-3x logo-icon" aria-hidden="true"></i>
-    </div>
-
-    <!-- navbar -->
-    <ul class="nav">
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <!-- <li><a href="#station">staion</a></li> -->
-      <li class="login-li">
-        <button class="login-btn hover-opacity" id="login-button" route="/login.html" >
-          login
-        </button>
-      </li>
-    </ul>
-    <!--./nav-->
-
-    <div class="clear"></div>
-  </div>
-</div>
-<!--./header-->
+  
 <!--Home-->
 <div class="home">
   <div class="overlay">
@@ -101,4 +104,7 @@ const showHome = () => {
   `;
   containerHome.innerHTML = Html;
 };
-export { showLogin, showAllTrains, showHome };
+const showSensors = () => {
+  let Html = ``;
+};
+export { showLogin, showAllTrains, showHome, navbar };

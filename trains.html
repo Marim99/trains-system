@@ -11,24 +11,47 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="style\style.css" />
+    <link rel="stylesheet" type="text/css" href="style\home.css" />
     <title>Document</title>
   </head>
-  <body class="home-container">
-      <nav class="navbar">
-        <div class="container-fluid login-text" style="font-size: 2.3rem; font-weight: 400">
-            Smart <span>Railway</span>
-          </p>
+  <body>
+    <div class="header"></div>
+    <div class="trains-div-container"></div>
+    <div
+      class="modal"
+      id="gallery-modal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+            <button
+              type="button"
+              class="btn-close"
+              data-toggle="modal"
+              data-target="#deleteModal"
+              data-backdrop="static"
+              data-keyboard="false"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h1>hiii</h1>
+          </div>
         </div>
-      </nav>
-    <div class="container" >
-      <div class="trains-div-container"></div>
+      </div>
     </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/trains.js"></script>
   </body>
-  <script src="node_modules/jquery/dist/jquery.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
-  <script type="module" src="js/trains.js"></script>
+  <script></script>
 </html>

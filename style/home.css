@@ -8,8 +8,6 @@ body {
 }
 .container {
   width: 80%;
-  /* background-color:bisque; */
-  /* background-color:grey; */
   margin: auto; /*34an ywastan al div fe nos al bage*/
 }
 
@@ -92,26 +90,23 @@ a {
 }
 /* ----------------------------3.0-Header----------------------------------- */
 .header {
-  /* background-color:antiquewhite; */
   background-color: #001a33;
   position: fixed;
   width: 100%;
   z-index: 10;
+  height: 60px;
+  top: 0px;
 }
 .header .container .logo {
   width: 40%;
-  /* background-color: blueviolet; */
   float: left;
 }
 .header .container .nav {
-  width: 60%;
-  /*background-color: blue;*/
-  float: left;
   list-style: none;
   text-align: right;
 }
 .header .container .nav > li {
-  display: inline-block; /*34an ageb kol al li ganb b3d*/
+  display: inline-block;
   text-align: center;
   margin: 5px 0;
 }
@@ -125,8 +120,8 @@ a {
 }
 
 /* al line al azra2 ally ta7t kol link bedon hover */
-.header .container .nav > li > a.active::after,
-.header .container .nav > li > a::after {
+.header .container .nav > li > .navbar-link.active::after,
+.header .container .nav > li > .navbar-link::after {
   content: "";
   margin-top: 2px;
   display: block;
@@ -134,10 +129,10 @@ a {
   background-color: cornflowerblue;
   transition: 0.5s; /*34an al hover*/
 }
-.header .container .nav > li > a::after {
+.header .container .nav > li > .navbar-link::after {
   width: 0;
 }
-.header .container .nav > li > a.active::after {
+.header .container .nav > li > .navbar-link.active::after {
   width: 100%;
 }
 
@@ -189,7 +184,7 @@ a {
 /* ---------------------3.1-home------------------------- */
 .home {
   height: 100vh;
-  background-image: url(../Images/train.jpg);
+  background-image: url("../Images/train.jpg");
   background-position: center;
   background-size: cover; /*css3*/
   position: relative;

@@ -10,26 +10,25 @@ function checkLogin(e) {
   console.log(`passwprd ${userPassword}`);
   let x = Data.sendData(userId, userPassword);
 }
-function loginBtn(e) {
-  // e.preventDefault();
-  Model.routing("login", "/login.html");
-}
+
 function showAllTrains() {
   Model.getTrains();
 }
 function init() {
   Data.getData("https://reqres.in/api/users");
+  View.navbar();
   View.showLogin();
   document
     .querySelector("#submit-button")
     .addEventListener("click", checkLogin);
 }
 function trains() {
+  View.navbar();
   showAllTrains();
 }
 function home() {
+  View.navbar();
   View.showHome();
-  document.querySelector("#login-button").addEventListener("click", loginBtn);
 }
 
 export { init, showAllTrains, trains, home };
