@@ -11,6 +11,38 @@ body {
   width: 100%;
   background-color: #082a4b;
 }
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+.navbar-light .navbar-brand {
+  padding-left: 5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.navbar-light .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.navbar-light .navbar-brand span {
+  color: #6195ff;
+}
+.navbar-light .navbar-toggler {
+  color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.login-btn {
+  background-color: #6195ff;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+}
 .login-container {
   background-color: #001a33;
 }
@@ -98,9 +130,20 @@ body {
 .home-container {
   background-color: #2c2c32;
 }
+.trains-div-container {
+  align-self: center;
+}
 .train-card {
   position: relative;
   height: 50px;
   top: 150px;
+  width: 60%;
   margin-top: 15px;
+  margin-left: 18%;
+}
+.sensor-card {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #082a4b;
+  color: #fff;
 }

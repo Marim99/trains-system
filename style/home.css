@@ -97,6 +97,7 @@ a {
   height: 60px;
   top: 0px;
 }
+/*
 .header .container .logo {
   width: 40%;
   float: left;
@@ -112,15 +113,15 @@ a {
 }
 .header .container .nav li a {
   /*................*/
-  color: white;
+/* color: white;
   font-size: 15px;
   text-decoration: none;
   padding: 10px; /*al badding hena 27sn mn al li 34an 2wsa3 al a 34an lma 2dos fe ay mkan akon wa2f 3la al link m4 4art al kelma bas*/
-  display: block; /*34an al padding y4t8al mn kol al 2tgahat*/
-}
+/*  display: block; /*34an al padding y4t8al mn kol al 2tgahat*/
+/*}
 
 /* al line al azra2 ally ta7t kol link bedon hover */
-.header .container .nav > li > .navbar-link.active::after,
+/*.header .container .nav > li > .navbar-link.active::after,
 .header .container .nav > li > .navbar-link::after {
   content: "";
   margin-top: 2px;
@@ -128,7 +129,7 @@ a {
   height: 3px;
   background-color: cornflowerblue;
   transition: 0.5s; /*34an al hover*/
-}
+/*}
 .header .container .nav > li > .navbar-link::after {
   width: 0;
 }
@@ -146,11 +147,6 @@ a {
 .dropdown-menue {
   position: absolute;
 }
-.header .container .logo img {
-  width: 70px;
-  height: 40px;
-}
-
 .header .container .nav li .dropdown-menue a:hover:after {
   width: 0;
 }
@@ -180,7 +176,7 @@ a {
   border: none;
   width: 100px;
   height: 30px;
-}
+}*/
 /* ---------------------3.1-home------------------------- */
 .home {
   height: 100vh;

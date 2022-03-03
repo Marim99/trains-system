@@ -9,29 +9,56 @@ const test = () => {
   //myModal.show();
   $("#Mymodal").modal("show");
 };
+let x = `  <nav class="navbar navbar-expand-lg">
+<!-- logo -->
+<div class="container-fluid">
+<a class="navbar-brand" href="#"><img src="../Images/352317_directions_train_icon.svg"  /></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- navbar -->
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav justify-content-end">
+  <li class="nav-item"><a href="#" class="active navbar-link">Home</a></li>
+  <li class="nav-item"><a class="navbar-link" href="#about">About</a></li>
+  <li class="nav-item login-li">
+    <a href="/login.html"><button class="login-btn hover-opacity" id="login-button"  >
+      login
+    </button><a>
+  </li>
+</ul>
+<!--./nav-->
+</div>
 
+</div>
+</nav>`;
 const navbar = () => {
   let Html = `
-  <div class="container">
-    <!-- logo -->
-    <div class="logo">
-      <i class="fa fa-train fa-3x logo-icon" aria-hidden="true"></i>
-    </div>
-
-    <!-- navbar -->
-    <ul class="nav">
-      <li><a href="#" class="active navbar-link">Home</a></li>
-      <li><a class="navbar-link" href="#about">About</a></li>
-      <li class="login-li">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../Images/Vector.png"  />Smart<span>Railway</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item login-li">
         <a href="/login.html"><button class="login-btn hover-opacity" id="login-button"  >
-          login
-        </button><a>
-      </li>
-    </ul>
-    <!--./nav-->
+        login
+      </button><a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  `;
 
-    <div class="clear"></div>
-  </div>`;
   containerNavbar.innerHTML = Html;
 };
 const showLogin = () => {
@@ -70,11 +97,8 @@ const showAllTrains = (id, state) => {
   <div class="card train-card" ${(onclick = function () {
     test();
   })}>
-  <div class="card-body">${id}
-  </div>
-  <div class="card-body train-state">${state}
-  </div>
-  
+  <div class="card-body">Train Id: ${id}
+  </div>  
 </div>
         
   `;
@@ -87,11 +111,9 @@ const showHome = () => {
 <div class="home">
   <div class="overlay">
     <div class="home-content">
-      <h1 class="title1">we are cteative agency</h1>
+      <h1 class="title1">we are students at the faculty of Engineer</h1>
       <p class="home-desc">
-        morbi mattis felis at nunc.Duis viverra diam non justo.In
-        nisl.Nullam sit amet magna in magna gravida vehicula.Mauris
-        tincidunt sem sed arcu.Nunc posuere.
+        We made smart Railway system
       </p>
     </div>
     <!--./HOME-content-->
